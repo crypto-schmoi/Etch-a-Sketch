@@ -13,15 +13,18 @@ function createGrid() {
         cell.classList.add('cell');
         grid.appendChild(cell);
         
-// Added EventListeners for mouse hover so the background color will change to purple 
+// Added EventListener for mouse hover so the background color will change to purple 
         cell.addEventListener("mouseenter", function() {
         cell.style.backgroundColor = "purple";
-        });
-
-        cell.addEventListener("mouseleave", function() { // EventListener added so when mouse moves the box goes back to white
-        cell.style.backgroundColor = "white";
         });
      }
     }
 }
 createGrid();
+
+// Created a slider so a user can change the number of cells in the grid
+const slider = document.getElementById("myRange");
+output.innerHTML = slider.value;
+});
+
+// Add a button that changes the size of the cell but keeps the grid the same width & height
