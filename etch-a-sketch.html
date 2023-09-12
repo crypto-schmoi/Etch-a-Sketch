@@ -3,12 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to CSS file -->
     <link rel="stylesheet" href="style-etch-a-sketch.css">
     <title>My Etch-A-Sketch</title>
 </head>
 <body>
+   <div class="main-heading">
+        <h1>Draw something!</h1>
+    </div> 
+
+    <h3>Choose your square size</h3>
+    
+    <div class="slidecontainer">
+        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+      </div>
     <!-- A container for the outside of the squares for the divs - place divs inside the container -->
     <div class="grid"></div> 
+    <!-- Link to Javascript file -->
     <script src="etch-a-sketch.js"></script>
-</body>
+    
+      </body>
 </html>
