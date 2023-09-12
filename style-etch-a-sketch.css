@@ -1,16 +1,67 @@
 /* Create a webpage with a 16x16 grid of square divs. */
 .cell {
-    border: 1px solid black;
+    border: 1px solid rgb(121, 118, 118);
     display: grid;
     width: max-content;
-    height: 50px;
-    width: 50px;
+    height: 29.25px;
+    width: 29.25px;
     display: flex;
-    
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .grid {
     display: flex;
     flex-wrap: wrap; /* Allow items to wrap to the next row if needed */
-    max-width: 850px;
+    max-width: 500px;
+    max-height: 500px;
+    border: 3px solid black;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+/* Styling for the headers */
+.main-heading {
+    text-align: center;
+    margin-bottom: -50px;
+}
+
+/* Styling for slider in html */
+
+.slidecontainer {
+    width: 50%;
+  }
+  
+  .slider {
+    -webkit-appearance: none;
+    width: 50%;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #04AA6D;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #04AA6D;
+    cursor: pointer;
+  }
