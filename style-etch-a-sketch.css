@@ -1,4 +1,14 @@
 /* Create a webpage with a 16x16 grid of square divs. */
+.cell {
+    border: 1px solid black;
+    display: grid;
+    width: max-content;
+    height: 50px;
+    width: 50px;
+    display: flex;
+}
+
 .grid {
-    border: 1px, black;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next row if needed */
 }
