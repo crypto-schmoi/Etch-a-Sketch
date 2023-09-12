@@ -1,10 +1,10 @@
-// Create a webpage with a 16x16 grid of square divs.
-
-// Create the divs using JavaScript. Don’t try making them by hand with copy and pasting in your HTML file!
+// Created a webpage with a 16x16 grid of square divs.
+document.addEventListener("DOMContentLoaded", function() {
+    console.log("DOM is ready.");
 const rows = 16; // Creates a variable for number of rows (16)
 const columns = 16; // Creates a variable for number of columns (16)
 
-const grid = document.querySelector('.grid'); // Selects the div class from the HTML 
+const grid = document.querySelector('.grid'); // Selects the div class "grid" from the HTML 
 
 function createGrid() {
     for (let i = 0; i < rows; i++) {
@@ -12,13 +12,16 @@ function createGrid() {
         const cell = document.createElement('div'); // Adds div elements
         cell.classList.add('cell');
         grid.appendChild(cell);
+        
+// Added EventListeners for mouse hover so the background color will change to purple 
+        cell.addEventListener("mouseenter", function() {
+        cell.style.backgroundColor = "purple";
+        });
+
+        cell.addEventListener("mouseleave", function() { // EventListener added so when mouse moves the box goes back to white
+        cell.style.backgroundColor = "white";
+        });
      }
     }
-    console.log("Grid created successfully.");
 }
-
 createGrid();
-// It’s best to put your grid squares inside another “container” div (which can go directly in your HTML).
-
-// You need to make the divs appear as a grid (versus just one on each line). This is a perfect opportunity to apply what you have learned about flexbox.
-// Be careful with borders and margins, as they can adjust the size of the squares!
