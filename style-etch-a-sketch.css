@@ -1,23 +1,22 @@
 /* Create a webpage with a 16x16 grid of square divs. */
 .cell {
     border: 1px solid rgb(121, 118, 118);
-    display: grid;
-    width: max-content;
-    height: 29.25px;
-    width: 29.25px;
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0;
+    padding: 0;
+
 }
 
 .grid {
-    display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to the next row if needed */
-    max-width: 500px;
-    max-height: 500px;
-    border: 3px solid black;
-    margin-left: auto;
-    margin-right: auto;
+  margin-top: 50px;
+  display: inline-grid;
+  grid-template-columns: repeat(16, 2fr);
+  grid-template-rows: repeat(16, 2fr);
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  height: 575px;
+  width: 575px;
+  background-color: white;
 }
 
 /* Styling for the headers */
@@ -26,10 +25,15 @@
     margin-bottom: -50px;
 }
 
+
+
 /* Styling for slider in html */
 
 .slidecontainer {
     width: 50%;
+    display: flex;
+    align-items: center;
+    margin-left: 20px; 
   }
   
   .slider {
@@ -37,11 +41,12 @@
     width: 50%;
     height: 15px;
     border-radius: 5px;
-    background: #d3d3d3;
+    background: #c098f5;
     outline: none;
     opacity: 0.7;
     -webkit-transition: .2s;
     transition: opacity .2s;
+
   }
   
   .slider:hover {
@@ -54,7 +59,7 @@
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background: #04AA6D;
+    background: #5b18b2;
     cursor: pointer;
   }
   
@@ -62,6 +67,14 @@
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background: #04AA6D;
+    background: #6121c9;
     cursor: pointer;
   }
+  
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(255, 205, 250);
+}
